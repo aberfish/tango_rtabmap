@@ -14,6 +14,9 @@
           <param name="publish_tf"    value="true"/>
           <param name="approx_sync"       value="true"/> 
           <param name="Rtabmap/StartNewMapOnLoopClosure" value="false"/>
+
+          <param name="Rtabmap/DetectionRate" value="4"/>
+
           <!-- <param name="subscribe_odom_info"  value="false"/> -->
           <param name="wait_for_transform_duration"  value="1"/>
           <param name="odom_model_type" value="diff"/>
@@ -32,7 +35,6 @@
           <param name="RGBD/AngularUpdate"        type="string" value="0"/>
           <param name="RGBD/LinearUpdate"         type="string" value="0"/>
           <param name="RGBD/OptimizeFromGraphEnd" type="string" value="false"/>
-          <param name="Grid/FromDepth"            type="string" value="false"/> <!-- occupancy grid from lidar -->
           <param name="Reg/Force3DoF"             type="string" value="true"/>
           <param name="Reg/Strategy"              type="string" value="1"/> <!-- 1=ICP -->
           
