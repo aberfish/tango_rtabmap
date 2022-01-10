@@ -20,11 +20,13 @@ static:
   map_topic: /map
   subscribe_to_updates: true
   static_map: true
+  use_map_topic: true
+  first_map_only: false
 
 obstacles:
-    enabled: true
-    observation_sources: scansource
-    scansource: {sensor_frame: lidar_link, data_type: LaserScan, topic: /scan, clearing: true, marking: false}
+  enabled: true
+  observation_sources: scansource
+  scansource: {sensor_frame: lidar_link, data_type: LaserScan, topic: /scan, clearing: true, marking: false}
 
 robot_radius: 0.20 # 0.150
 origin_x: -5.0

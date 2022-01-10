@@ -1,5 +1,4 @@
 controller_frequency: 10.0
-recovery_behaviour_enabled: true
 
 DWAPlannerROS:
   max_vel_x: 0.3
@@ -25,6 +24,9 @@ DWAPlannerROS:
 
   use_dwa: true
 
+GlobalPlanner:
+  allow_unkown: true
+
 TrajectoryPlannerROS:
   max_vel_x: 0.3
   min_vel_x: 0.05
@@ -44,3 +46,4 @@ TrajectoryPlannerROS:
 
   holonomic_robot: false
   meter_scoring: true
+
