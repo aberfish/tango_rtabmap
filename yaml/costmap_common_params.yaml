@@ -10,9 +10,13 @@ robot_base_frame: base_link
 transform_tolerance: 10.0
 resolution: 0.05
 
-inflation:
+inflationglobal:
   enabled: true
-  inflation_radius: 0.7
+  inflation_radius: 0.5
+
+inflationlocal:
+  enabled: true
+  inflation_radius: 0.2
 
 #layer definitions
 static:
@@ -24,7 +28,7 @@ static:
 obstacles:
   enabled: true
   observation_sources: scansource
-  scansource: {sensor_frame: lidar_link, data_type: LaserScan, topic: /scan, clearing: true, marking: false}
+  scansource: {sensor_frame: lidar_link, data_type: LaserScan, topic: /scan, clearing: true, marking: true}
 
 robot_radius: 0.20 # 0.150
 origin_x: -2.5

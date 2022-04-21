@@ -1,7 +1,7 @@
 plugins: 
  - {name: static, type: "costmap_2d::StaticLayer"}
- - {name: obstacles, type: "costmap_2d::ObstacleLayer"} 
- - {name: inflation, type: "costmap_2d::InflationLayer"}
+#  - {name: obstacles, type: "costmap_2d::ObstacleLayer"} 
+ - {name: inflationglobal, type: "costmap_2d::InflationLayer"}
 global_frame: map
 static_map: true
 rolling_window: false
