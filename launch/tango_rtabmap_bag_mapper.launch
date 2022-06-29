@@ -1,0 +1,12 @@
+<launch>
+
+    <arg name="bag" default="/home/tango/datasets/2022-06-06-14-05-29.bag" />
+    
+    <param name="/use_sim_time" value="true" />
+    
+    <include file="$(find tango_rtabmap)/launch/tango_rtabmap_lidar.launch" />
+    <include file="$(find tango_rtabmap)/launch/tango_rtabmap_rviz.launch" />
+    
+    <node pkg="rosbag" type="play" name="player" output="screen" args="--clock -l $(arg bag)" required="true" />
+
+</launch>
