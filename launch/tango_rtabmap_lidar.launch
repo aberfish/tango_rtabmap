@@ -5,17 +5,17 @@
 
     <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="">
           <param name="frame_id" type="string" value="base_link"/>
-
           <param name="subscribe_scan" type="bool" value="true"/>
           <param name="subscribe_rgb"    value="false"/>
           <param name="subscribe_depth"  value="false"/>
-          <param name="frame_id"         value="base_link"/>
           <param name="odom_frame_id"    value="odom"/>
+          <param name="icp_odometry"    value="true"/>
+          <param name="publish_tf"    value="true"/>
+          <param name="Rtabmap/StartNewMapOnLoopClosure" value="true"/>
+          <!-- <param name="subscribe_odom_info"  value="false"/> -->
           <param name="wait_for_transform_duration"  value="1"/>
           <param name="odom_model_type" value="diff"/>
           
-          <!-- <remap from="odom" to="/zed/zed_node/odom" unless="$(arg tango_sim)"/> -->
-          <!-- <remap from="scan" to="/scan_filtered" unless="$(arg tango_sim)"/> -->
           
           <remap from="odom" to="/odom" unless="$(arg tango_sim)"/>
           <remap from="scan" to="/scan" unless="$(arg tango_sim)"/>    
@@ -25,14 +25,18 @@
           <remap from="grid_map" to="/map"/>
 
           <!-- RTAB-Map's parameters -->
+          <param name="RGBD/NeighborLinkRefining" type="string" value="true"/>
+          <param name="RGBD/ProximityBySpace"     type="string" value="true"/>
+          <param name="RGBD/AngularUpdate"        type="string" value="0"/>
+          <param name="RGBD/LinearUpdate"         type="string" value="0"/>
+          <param name="RGBD/OptimizeFromGraphEnd" type="string" value="false"/>
           <param name="Grid/FromDepth"            type="string" value="false"/> <!-- occupancy grid from lidar -->
-          <param name="Reg/Strategy"              value="1"/>    <!-- 1 for lidar -->
-          <param name="Reg/Force3DoF"             value="true"/> <!-- 2d slam -->
-          <param name="RGBD/NeighborLinkRefining" value="true"/> <!-- odometry correction with scans -->
+          <param name="Reg/Force3DoF"             type="string" value="true"/>
+          <param name="Reg/Strategy"              type="string" value="1"/> <!-- 1=ICP -->
           
           <!-- ICP parameters -->
-          <!-- <param name="Icp/VoxelSize"                 type="string" value="0.05"/> -->
-          <!-- <param name="Icp/MaxCorrespondenceDistance" type="string" value="0.1"/> -->
+          <param name="Icp/VoxelSize"                 type="string" value="0.05"/>
+          <param name="Icp/MaxCorrespondenceDistance" type="string" value="0.1"/>
           
     </node>
   </group>
