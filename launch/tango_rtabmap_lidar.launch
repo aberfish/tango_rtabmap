@@ -13,7 +13,7 @@
           <param name="icp_odometry"    value="true"/>
           <param name="publish_tf"    value="true"/>
           <param name="approx_sync"       value="true"/> 
-          <param name="Rtabmap/StartNewMapOnLoopClosure" value="true"/>
+          <param name="Rtabmap/StartNewMapOnLoopClosure" value="false"/>
           <!-- <param name="subscribe_odom_info"  value="false"/> -->
           <param name="wait_for_transform_duration"  value="1"/>
           <param name="odom_model_type" value="diff"/>
