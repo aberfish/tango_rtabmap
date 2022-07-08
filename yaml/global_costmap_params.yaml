@@ -1,11 +1,10 @@
 global_costmap:
   plugins: 
     - {name: static_layer,       type: "costmap_2d::StaticLayer"}
-  global_frame: "map"
+  global_frame: "odom"
   robot_base_frame: "base_link"
   update_frequency: 2.0 
   publish_frequency: 1.0
-  rolling_window: true 
   always_send_full_costmap: true
   static_map: false
   map_type: costmap

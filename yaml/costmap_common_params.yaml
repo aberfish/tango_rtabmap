@@ -8,6 +8,8 @@ raytrace_range: 3.0
 robot_radius: 0.150
 inflation_radius: 0.35
 transform_tolerance: 30.0
+origin_x: -5.0
+origin_y: -5.0
 
 observation_sources: scan
 

@@ -9,9 +9,9 @@
           <param name="subscribe_rgb"    value="false"/>
           <param name="subscribe_rgbd"    value="false"/>
           <param name="subscribe_depth"  value="false"/>
-          <param name="odom_frame_id"    value=""/>
+          <param name="odom_frame_id"    value="odom"/>
           <param name="icp_odometry"    value="true"/>
-          <param name="publish_tf"    value="false"/>
+          <param name="publish_tf"    value="true"/>
           <param name="approx_sync"       value="true"/> 
           <param name="Rtabmap/StartNewMapOnLoopClosure" value="false"/>
           <!-- <param name="subscribe_odom_info"  value="false"/> -->

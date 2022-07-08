@@ -9,7 +9,7 @@
     
     <include file="$(find tango_rtabmap)/launch/tango_rtabmap_lidar.launch" />
 
-    <node pkg="rtabmap_ros" type="icp_odometry" name="icp_odom" required="true"/>
+    <node pkg="rtabmap_ros" type="icp_odometry" name="icp_odom" required="true"/> 
     
     <include file="$(find tango_rtabmap)/launch/tango_rtabmap_rviz.launch" if="$(arg use_rviz)" />
     
