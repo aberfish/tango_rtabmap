@@ -1,0 +1,3 @@
+map_topic: "/map"
+first_map_only: false
+use_map_topic: true

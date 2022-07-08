@@ -3,7 +3,7 @@
 
   <group ns="rtabmap">
 
-    <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="">
+    <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
           <param name="frame_id" type="string" value="base_link"/>
           <param name="subscribe_scan" type="bool" value="true"/>
           <param name="subscribe_rgb"    value="false"/>
@@ -11,7 +11,7 @@
           <param name="subscribe_depth"  value="false"/>
           <param name="odom_frame_id"    value=""/>
           <param name="icp_odometry"    value="true"/>
-          <param name="publish_tf"    value="true"/>
+          <param name="publish_tf"    value="false"/>
           <param name="approx_sync"       value="true"/> 
           <param name="Rtabmap/StartNewMapOnLoopClosure" value="false"/>
           <!-- <param name="subscribe_odom_info"  value="false"/> -->
