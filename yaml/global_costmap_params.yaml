@@ -1,11 +1,17 @@
 global_costmap:
   plugins: 
-    - {name: static_layer,       type: "costmap_2d::StaticLayer"}
-  global_frame: "odom"
-  robot_base_frame: "base_link"
+    - {name: static,       type: "costmap_2d::StaticLayer"}
+    - {name: obstacles_laser,       type: "costmap_2d::ObstacleLayer"} 
+    - {name: inflation,        type: "costmap_2d::InflationLayer"}
+    
+  global_frame: map
+  robot_base_frame: base_link
   update_frequency: 2.0 
   publish_frequency: 1.0
   always_send_full_costmap: true
   static_map: false
   map_type: costmap
+  rolling_window: false
+  track_unknown_space: true
+  
 
