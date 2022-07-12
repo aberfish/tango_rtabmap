@@ -1,12 +1,8 @@
 local_costmap:
-  global_frame: map 
-  robot_base_frame: base_link
+  global_frame: /map 
 
-  update_frequency: 2.0
-  publish_frequency: 2.0
 
   rolling_window: true
-  always_send_full_costmap: true
   static_map: false
   map_type: costmap
 
