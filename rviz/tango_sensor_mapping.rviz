@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Odometry1/Shape1
+        - /globalplan trajectory1
         - /World Coord point1
       Splitter Ratio: 0.5
     Tree Height: 407
@@ -458,7 +459,7 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
-      Topic: /move_base/TrajectoryPlannerROS/global_plan
+      Topic: /move_base/DWAPlannerROS/global_plan
       Unreliable: false
       Value: true
     - Alpha: 0.699999988079071
@@ -548,7 +549,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.7389678955078125
+      Distance: 11.108353614807129
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1

@@ -4,6 +4,5 @@ plugins:
  - {name: inflation, type: "costmap_2d::InflationLayer"}
 global_frame: map
 static_map: true
-map_type: costmap
 rolling_window: false
-track_unknown_space: true
+track_unknown_space: false
