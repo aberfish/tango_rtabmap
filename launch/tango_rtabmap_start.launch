@@ -11,7 +11,7 @@
 
     <include file="$(find tango_rtabmap)/launch/tango_rtabmap_nav.launch" if="$(arg use_nav)" />
     
-    <include file="$(find tango_rtabmap)/launch/tango_rtabmap_lidar.launch" />
+    <include file="$(find tango_rtabmap)/launch/tango_rtabmap_map.launch" />
 
     <node pkg="rosbag" type="play" name="player" output="screen" args="--clock -l $(arg bag)" required="true" if="$(arg use_bag)" />
 

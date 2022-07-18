@@ -1,8 +1,5 @@
 <launch>
-  <arg name="tango_sim" default="false" />
-
   <group ns="rtabmap">
-
     <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
           <param name="frame_id" type="string" value="base_link"/>
           <param name="subscribe_scan" type="bool" value="true"/>
@@ -22,8 +19,8 @@
           <param name="odom_model_type" value="diff"/>
           
           
-          <remap from="odom" to="/odom" unless="$(arg tango_sim)"/>
-          <remap from="scan" to="/scan" unless="$(arg tango_sim)"/>    
+          <remap from="odom" to="/odom"/>
+          <remap from="scan" to="/scan"/>    
 
           <param name="queue_size" type="int" value="30"/>
 
