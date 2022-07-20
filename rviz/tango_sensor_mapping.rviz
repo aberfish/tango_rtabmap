@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Odometry1/Shape1
         - /global costmap1
+        - /World Coord point1
       Splitter Ratio: 0.5
     Tree Height: 407
   - Class: rviz/Selection
@@ -538,7 +539,7 @@ Visualization Manager:
       Name: World Coord point
       Queue Size: 10
       Radius: 0.20000000298023224
-      Topic: /realworld_coords
+      Topic: /goal_coords
       Unreliable: false
       Value: true
     - Alpha: 1

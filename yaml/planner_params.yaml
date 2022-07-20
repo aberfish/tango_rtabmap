@@ -32,7 +32,7 @@ DWAPlannerROS:
   angular_sim_granularity: 0.05
 
   path_distance_bias: 32
-  goal_distance_bias: 24
+  goal_distance_bias: 5
 
   occdist_scale: 0.02
   twirling_scale: 0
